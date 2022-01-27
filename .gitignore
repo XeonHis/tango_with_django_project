@@ -1,0 +1,9 @@
+# .DS_Store
+.DS_Store
+*/.DS_Store
+
+# idea compile files
+.idea/
+
+# pycache files
+*/__pycache__
