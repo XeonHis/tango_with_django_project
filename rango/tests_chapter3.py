@@ -9,7 +9,7 @@
 # 
 
 #
-# In order to run these tests, copy this module to your COMPSCI5012_CW1_Paul/rango/ directory.
+# In order to run these tests, copy this module to your tango_with_django_project/rango/ directory.
 # Once this is complete, run $ python manage.py test rango.tests_chapter3
 # 
 # The tests will then be run, and the output displayed -- do you pass them all?
@@ -37,12 +37,12 @@ class Chapter3ProjectStructureTests(TestCase):
     
     def test_project_created(self):
         """
-        Tests whether the COMPSCI5012_CW1_Paul configuration directory is present and correct.
+        Tests whether the tango_with_django_project configuration directory is present and correct.
         """
-        directory_exists = os.path.isdir(os.path.join(self.project_base_dir, 'COMPSCI5012_CW1_Paul'))
-        urls_module_exists = os.path.isfile(os.path.join(self.project_base_dir, 'COMPSCI5012_CW1_Paul', 'urls.py'))
+        directory_exists = os.path.isdir(os.path.join(self.project_base_dir, 'tango_with_django_project'))
+        urls_module_exists = os.path.isfile(os.path.join(self.project_base_dir, 'tango_with_django_project', 'urls.py'))
         
-        self.assertTrue(directory_exists, f"{FAILURE_HEADER}Your COMPSCI5012_CW1_Paul configuration directory doesn't seem to exist. Did you use the correct name?{FAILURE_FOOTER}")
+        self.assertTrue(directory_exists, f"{FAILURE_HEADER}Your tango_with_django_project configuration directory doesn't seem to exist. Did you use the correct name?{FAILURE_FOOTER}")
         self.assertTrue(urls_module_exists, f"{FAILURE_HEADER}Your project's urls.py module does not exist. Did you use the startproject command?{FAILURE_FOOTER}")
     
     def test_rango_app_created(self):
@@ -81,7 +81,7 @@ class Chapter3IndexPageTests(TestCase):
         self.views_module = importlib.import_module('rango.views')
         self.views_module_listing = dir(self.views_module)
         
-        self.project_urls_module = importlib.import_module('COMPSCI5012_CW1_Paul.urls')
+        self.project_urls_module = importlib.import_module('tango_with_django_project.urls')
     
     def test_view_exists(self):
         """
